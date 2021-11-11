@@ -1,0 +1,86 @@
+<style>
+    table {
+  width: 100%;
+  height: 10%;
+}
+</style>
+
+<div class="wrapper"> 
+    <app-navbar></app-navbar> 
+    <div class="section">
+          <div class="container">
+              <div class="text-right"> 
+              </div>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                  
+                    <!-- Checkbox Column -->
+                    <ng-container matColumnDef="select">
+                      <th mat-header-cell *matHeaderCellDef>ردیف</th>
+                      <td mat-cell *matCellDef="let element"> <button class="btn btn-primary" type="button" (click)="selectRowTable(element)"> انتخاب کنید</button> </td>                    
+                    </ng-container>
+                  
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="userId">
+                      <th mat-header-cell *matHeaderCellDef> شماره </th>
+                      <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
+                    </ng-container>
+                  
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="pathImg">
+                      <th mat-header-cell *matHeaderCellDef> عکس </th>
+                      <td mat-cell *matCellDef="let element"> {{element.pathImg}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="fName">
+                      <th mat-header-cell *matHeaderCellDef> نام </th>
+                      <td mat-cell *matCellDef="let element"> {{element.fName}} </td>
+                    </ng-container>
+                  
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="lName">
+                      <th mat-header-cell *matHeaderCellDef> نام خانوادگی </th>
+                      <td mat-cell *matCellDef="let element"> {{element.lName}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="fieldName">
+                      <th mat-header-cell *matHeaderCellDef> نام رشته </th>
+                      <td mat-cell *matCellDef="let element"> {{element.fieldName}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="age">
+                      <th mat-header-cell *matHeaderCellDef> سن </th>
+                      <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="educationalBackground">
+                      <th mat-header-cell *matHeaderCellDef> سابقه تحصیلی </th>
+                      <td mat-cell *matCellDef="let element"> {{element.educationalBackground}} </td>
+                    </ng-container>
+                  
+                    
+                 
+                    
+                    <ng-container matColumnDef="teachingExperience">
+                      <th mat-header-cell *matHeaderCellDef> سابقه تدریس </th>
+                      <td mat-cell *matCellDef="let element"> {{element.teachingExperience}} </td>
+                    </ng-container>
+
+
+                    <ng-container matColumnDef="registerDate">
+                      <th mat-header-cell *matHeaderCellDef> تاریخ ثبت </th>
+                      <td mat-cell *matCellDef="let element"> {{element.registerDate}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+                        (click)="selection.toggle(row)">
+                    </tr>
+                  </table>
+               
+              
+          </div>
+    </div>
+ 
+</div>

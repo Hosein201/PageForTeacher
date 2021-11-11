@@ -1,0 +1,181 @@
+<style>
+    table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+ 
+ </style>
+  <app-navbar></app-navbar>
+<div class="wrapper">  
+  <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                        <h2 _ngcontent-c3="" class="text-right">درخواست های پشتیبانی</h2> 
+                        <button type="button" class="btn btn-primary" (click)="open(classic)">درخواست جدید</button>    
+
+                  
+                        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                          <!-- Checkbox Column -->
+                          <ng-container matColumnDef="select">
+                            <th mat-header-cell *matHeaderCellDef>ردیف</th>
+                            <td mat-cell *matCellDef="let element"> <button class="btn btn-primary" type="button" (click)="open(detail ,element)"> انتخاب کنید</button> </td>                    
+                          </ng-container>
+                        
+                          <!-- Position Column -->
+                          <ng-container matColumnDef="id">
+                            <th mat-header-cell *matHeaderCellDef> شماره</th>
+                            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                          </ng-container>
+                        
+                          <!-- Name Column -->
+                          <ng-container matColumnDef="titel">
+                            <th mat-header-cell *matHeaderCellDef> عنوان </th>
+                            <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
+                          </ng-container>
+                        
+                          <!-- Weight Column -->
+                          <ng-container matColumnDef="message">
+                            <th mat-header-cell *matHeaderCellDef> متن درخواست </th>
+                            <td mat-cell *matCellDef="let element"> {{element.message}} </td>
+                          </ng-container>
+                        
+                          <!-- Symbol Column -->
+                          <ng-container matColumnDef="isReadAdmin">
+                            <th mat-header-cell *matHeaderCellDef> خوانده شده </th>
+                            <td mat-cell *matCellDef="let element"> {{element.isReadAdmin}} </td>
+                          </ng-container>
+
+
+                              <!-- Symbol Column -->
+                          <ng-container matColumnDef="answer">
+                            <th mat-header-cell *matHeaderCellDef> پاسخ</th>
+                            <td mat-cell *matCellDef="let element"> {{element.answer}} </td>
+                          </ng-container>
+                        
+                          
+                            <!-- Symbol Column -->
+                            <ng-container matColumnDef="registerDate">
+                              <th mat-header-cell *matHeaderCellDef> تاریخ درخواست</th>
+                              <td mat-cell *matCellDef="let element"> {{element.registerDate}} </td>
+                            </ng-container>
+
+                          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                          <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+                              (click)="selection.toggle(row)">
+                          </tr>
+                        </table>
+                     
+             
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<ng-template #classic let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h2 class="text-center">ثبت درخواست جدید</h2>
+    </div>
+    <div class="modal-body">
+        <form novalidate #form="ngForm" (submit)="onSubmit(form)">
+            <div class="text-right">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">عنوان درخواست</label>
+                    <input type="text" class="form-control text-right" name="titel" #titel="ngModel"  [(ngModel)]="supportService.formDateCreate.titel" placeholder="عنوان" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">متن درخواست</label>
+                    <textarea class="form-control text-right" name="message" #message="ngModel" [(ngModel)]="supportService.formDateCreate.message" placeholder="متن" rows="3" required></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="left-side">
+                    <button type="button" class="btn btn-primary btn-lg btn-simple btn-round" (click)="c('Close click')">بستن</button>
+                </div>
+                <div class="divider"></div>
+                <div class="right-side">
+                    <button type="submit" class="btn btn-primary btn-lg btn-round" [disabled]="form.invalid">ثبت درخواست</button>
+                </div>                
+            </div>
+        </form>
+    </div>
+   
+   </ng-template>
+
+   <ng-template #detail let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h2 class="text-center">جزییات درخواست</h2>
+    </div>
+    <div class="modal-body  text-right">
+    
+        <div class="form-group">
+          <label  >شماره درخواست</label>
+          <input type="text" class="form-control  text-right"   name="number" #number="ngModel"  [(ngModel)]="numberDetail" readonly>
+           
+        </div>
+        <div class="form-group">
+          <label for="titel">عنوان درخواست</label>
+          <input type="text" class="form-control  text-right" id="titel" name="titel" #titel="ngModel"  [(ngModel)]="titelDetail" placeholder="titel" readonly>
+        </div>
+        <div class="form-group">
+          <label for="message">متن  درخواست</label>
+          <textarea type="text" class="form-control  text-right" id="message" name="message" #message="ngModel"  [(ngModel)]="messageDetail" placeholder="message" readonly></textarea>
+        </div>
+        <div class="form-group">
+          <label for="answer">پاسخ درخواست</label>
+          <textarea type="text" class="form-control  text-right" id="answer"name="answer" #answer="ngModel"  [(ngModel)]="answerDetail" placeholder="answer" readonly></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" (click)="c('Close click')" >بستن</button>
+     
+    </div>
+   
+   </ng-template>
