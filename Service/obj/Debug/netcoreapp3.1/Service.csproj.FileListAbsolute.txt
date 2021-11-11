@@ -1,0 +1,14 @@
+E:\githup\Teachers\Service\bin\Debug\netcoreapp3.1\Service.deps.json
+E:\githup\Teachers\Service\bin\Debug\netcoreapp3.1\Service.dll
+E:\githup\Teachers\Service\bin\Debug\netcoreapp3.1\Service.pdb
+E:\githup\Teachers\Service\obj\Debug\netcoreapp3.1\Service.csprojAssemblyReference.cache
+E:\githup\Teachers\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
+E:\githup\Teachers\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
+E:\githup\Teachers\Service\obj\Debug\netcoreapp3.1\Service.dll
+E:\githup\Teachers\Service\obj\Debug\netcoreapp3.1\Service.pdb
+E:\githup\Teachers\Service\bin\Debug\netcoreapp3.1\Domain.dll
+E:\githup\Teachers\Service\bin\Debug\netcoreapp3.1\Utility.dll
+E:\githup\Teachers\Service\bin\Debug\netcoreapp3.1\Domain.pdb
+E:\githup\Teachers\Service\bin\Debug\netcoreapp3.1\Utility.pdb
+E:\githup\Teachers\Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
+E:\githup\Teachers\Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache

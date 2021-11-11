@@ -1,0 +1,9 @@
+E:\githup\Teachers\Utility\bin\Debug\netcoreapp3.1\Utility.deps.json
+E:\githup\Teachers\Utility\bin\Debug\netcoreapp3.1\Utility.dll
+E:\githup\Teachers\Utility\bin\Debug\netcoreapp3.1\Utility.pdb
+E:\githup\Teachers\Utility\obj\Debug\netcoreapp3.1\Utility.AssemblyInfoInputs.cache
+E:\githup\Teachers\Utility\obj\Debug\netcoreapp3.1\Utility.AssemblyInfo.cs
+E:\githup\Teachers\Utility\obj\Debug\netcoreapp3.1\Utility.dll
+E:\githup\Teachers\Utility\obj\Debug\netcoreapp3.1\Utility.pdb
+E:\githup\Teachers\Utility\obj\Debug\netcoreapp3.1\Utility.csproj.CoreCompileInputs.cache
+E:\githup\Teachers\Utility\obj\Debug\netcoreapp3.1\Utility.csprojAssemblyReference.cache

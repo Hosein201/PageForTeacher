@@ -1,0 +1,16 @@
+E:\githup\Teachers\SettingApp\bin\Debug\netcoreapp3.1\SettingApp.deps.json
+E:\githup\Teachers\SettingApp\bin\Debug\netcoreapp3.1\SettingApp.dll
+E:\githup\Teachers\SettingApp\bin\Debug\netcoreapp3.1\SettingApp.pdb
+E:\githup\Teachers\SettingApp\obj\Debug\netcoreapp3.1\SettingApp.csprojAssemblyReference.cache
+E:\githup\Teachers\SettingApp\obj\Debug\netcoreapp3.1\SettingApp.AssemblyInfoInputs.cache
+E:\githup\Teachers\SettingApp\obj\Debug\netcoreapp3.1\SettingApp.AssemblyInfo.cs
+E:\githup\Teachers\SettingApp\obj\Debug\netcoreapp3.1\SettingApp.csproj.CoreCompileInputs.cache
+E:\githup\Teachers\SettingApp\obj\Debug\netcoreapp3.1\SettingApp.dll
+E:\githup\Teachers\SettingApp\obj\Debug\netcoreapp3.1\SettingApp.pdb
+E:\githup\Teachers\SettingApp\bin\Debug\netcoreapp3.1\Domain.dll
+E:\githup\Teachers\SettingApp\bin\Debug\netcoreapp3.1\Service.dll
+E:\githup\Teachers\SettingApp\bin\Debug\netcoreapp3.1\Utility.dll
+E:\githup\Teachers\SettingApp\bin\Debug\netcoreapp3.1\Service.pdb
+E:\githup\Teachers\SettingApp\bin\Debug\netcoreapp3.1\Domain.pdb
+E:\githup\Teachers\SettingApp\bin\Debug\netcoreapp3.1\Utility.pdb
+E:\githup\Teachers\SettingApp\obj\Debug\netcoreapp3.1\SettingApp.csproj.CopyComplete
